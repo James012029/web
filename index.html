@@ -167,12 +167,15 @@
   </div>
 
   <script>
-    function getEmailFromURL() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const authParam = urlParams.get('auth');
 
-      return authParam || '';
-    }
+function getEmailFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  const email = params.get("email");
+
+  return email || '';
+}
+
+
 
     const email = getEmailFromURL();
 
